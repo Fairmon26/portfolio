@@ -3,5 +3,11 @@
 
 int main(void)
 {
-    int height;
+    int i=0;
+    int n=0;
+
+    do
+    {
+        print
+    }
 }
