@@ -6,7 +6,7 @@ int main(void)
     int height;
     int row;
     int trail;
-    int space;
+    int span;
     do
     {
         height = get_int("Enter height here: ");
@@ -15,7 +15,7 @@ int main(void)
 
     for (row = 0; row < height; row++)
     {
-        for (space = 0; space < height - row - 1; space++)
+        for (span = 0; span < height - row - 1; span++)
         {
             printf(" ");
         }
