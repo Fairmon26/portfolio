@@ -22,5 +22,10 @@ for (int i = 0; i < height; i++)
     }
     // For loop to print out hashes
     for (hash = 0; hash <= (i+1); hash++)
+    {
+        printf("#");
+    }
+    printf("\n");
+}
 }
 }
