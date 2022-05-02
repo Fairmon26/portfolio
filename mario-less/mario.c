@@ -8,6 +8,7 @@ int main(void)
 
     do
     {
-        print
-    }
+        printf("Height:");
+        n=GetInt();
+    } while (n<1 || n > 8);
 }
