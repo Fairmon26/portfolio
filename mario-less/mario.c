@@ -3,7 +3,10 @@
 
 int main(void)
 {
-    int height, row, column, space;
+    int height;
+    int row;
+    int column;
+    int space;
     do
     {
         height = get_int("Enter height here: ");
@@ -12,11 +15,11 @@ int main(void)
 
     for (row = 0; row < height; row++)
     {
-        for (space = 0; space< height - row - 1; space++)
+        for (space = 0; space < height - row - 1; space++)
         {
             printf(" ");
         }
-        for(column = 0; column <= row; column++)
+        for (column = 0; column <= row; column++)
         {
             printf("#");
         }
