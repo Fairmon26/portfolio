@@ -3,22 +3,9 @@
 
 int main(void)
 {
-    int i=1;
-    int n=8;
-
     do
     {
-        printf("Height:");
-        n=GetInt();
-    } while (n<1 || n>8);
-
-    for (i=1; i<n; i++)
-    {
-        printf(" ");
-        for (int x=0; x<i+2; x++)
-        {
-            printf("#");
-        }
+    height = get_int("Enter height here: ");
     }
-
-}
+    while (height < 1 || height > 8);
+    }
