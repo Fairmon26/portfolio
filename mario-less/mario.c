@@ -3,9 +3,7 @@
 
 int main(void)
 {
-    int height;
-    int row;
-    int column;
+    int height, row, column;
     do
     {
         height = get_int("Enter height here: ");
