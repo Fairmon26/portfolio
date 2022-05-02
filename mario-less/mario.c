@@ -3,8 +3,8 @@
 
 int main(void)
 {
-    int i=0;
-    int n=0;
+    int i=1;
+    int n=8;
 
     do
     {
@@ -12,7 +12,7 @@ int main(void)
         n=GetInt();
     } while (n<1 || n > 8);
 
-    for (i=0; i<n; i++)
+    for (i=1; i<n; i++)
     {
         printf(" ");
         for (int x=0; x<i+2; x++)
