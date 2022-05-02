@@ -5,7 +5,7 @@ int main(void)
 {
     int height;
     int row;
-    int column;
+    int trail;
     int space;
     do
     {
@@ -19,7 +19,7 @@ int main(void)
         {
             printf(" ");
         }
-        for (column = 0; column <= row; column++)
+        for (trail = 0; trail <= row; trail++)
         {
             printf("#");
         }
