@@ -63,7 +63,7 @@ int calculate_dimes(int cents)
 {
     // TODO
     int dimes = 0;
-    while (cents >=10)
+    while (cents >= 10)
     {
         cents = cents - 10;
         dimes++;
