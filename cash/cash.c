@@ -50,7 +50,7 @@ int get_cents(void)
 int calculate_quarters(int cents)
 {
     // TODO
-    int cents
+    int quarters
     do
     {
         cents = get_int("Amount of change due");
