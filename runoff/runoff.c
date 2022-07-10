@@ -213,7 +213,7 @@ void eliminate(int min)
     {
         if (candidates[i].votes == min)
         {
-            candidates[i].eliminate = true;
+            candidates[i].eliminated = true;
         }
     }
     return;
