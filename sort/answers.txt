@@ -8,4 +8,4 @@ How do you know?: Sort 2 ran the fasted on the random list
 
 sort3 uses: Selection sort
 
-How do you know?: 
+How do you know?: Based on the answers from sort 1 and sort 2 selection was the only choice for sort 3
