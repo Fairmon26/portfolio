@@ -4,8 +4,8 @@ How do you know?: When I did a time run on sorted list sort 1 ran the fastest
 
 sort2 uses: Merge sort
 
-How do you know?: Sort 2 ran the fasted on the unsorted list
+How do you know?: Sort 2 ran the fasted on the random list
 
 sort3 uses: Selection sort
 
-How do you know?: TODO
+How do you know?: 
