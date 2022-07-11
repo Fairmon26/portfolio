@@ -42,11 +42,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE temp[height][width];
 
-    //Transformations to temp
-    // 1 2 3 4 -> _ _ _ _
-    //       j   cP
-    // 4 5 6 7 ->
-
     for(int i = 0; i < height; i++)
     {
         int curPos = 0;
