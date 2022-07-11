@@ -28,7 +28,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 
             sepiaRed = .393 * originalRed + .769 * oringinalGreen + .189 * originalBlue
             sepiaGreen = .349 * originalRed + .686 * originalGreen + .168 * originalBlue
-            sepiaBlue = .272 *
+            sepiaBlue = .272 * originalRed + .534 * originalGreen + .131 * originalBlue
         }
     }
     return;
