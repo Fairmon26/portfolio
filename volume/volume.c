@@ -41,8 +41,13 @@ int main(int argc, char *argv[])
     fread(headerBuffer, sizeof(BYTE), HEADER_SIZE, input);
     fwrite(headerBuffer, sizeof(BYTE), HEADER_SIZE, output);
 
-    // TODO: Read samples from input file and write updated data to output file
+    SAMPLE_AUDIO buffer;
 
+    while (fread(&buffer, sizeof(SAMPLE_AUDIO), 1, input) == 1)
+    {
+        buffer = buffer * factor;
+        fwrite(&buffer, sizeof(SAMPLE_AUDIO), 1, output);
+    }
     // Close files
     fclose(input);
     fclose(output);
