@@ -14,7 +14,6 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtRed = image[i][j].rgbtGreen = image[i][j].rgbtBlue = average;
         }
     }
-    return;
 }
 
 int cap(int value)
