@@ -62,7 +62,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-bool is_valid_pixel()
+bool is_valid_pixel(int i, int j, int height, int width)
+{
+    return i >=
+}
 
 RGBTRIPLE get_blurred_pixel(int i, int j, int height, int width, RGBTRIPLE image[height][width])
 {
