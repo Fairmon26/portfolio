@@ -62,6 +62,11 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
+RGBTRIPLE get_blurred_pixel(int i, int j, int height, int width, RGBTRIPLE image[height][width])
+{
+    for 
+}
+
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -72,42 +77,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             new_image[i][j] = get_blurred_pixel(i, j, height, width, image);
         }
-        }
     }
-
-    for(int i = 0; i < height; i++)
-    {
-        for(int j = 0; j < width; j++)
-        {
-            int count = 0;
-            int[] rowCoords = { row-1, row, row+1 };
-            int[] colCoords = { col-1, col, col+1 };
-            float totalR = totalG = totalB = 0;
-
-            for(int r = 0; r < 3; r++)
-            {
-                for(int c = 0; c < 3; c++)
-                {
-                    int curRow = rowCoords[r];
-                    int curCol = rowCoords[c];
-
-                    if(curRow >= 0 && curRow < height && curCol >= 0 && curCol < width)
-                    {
-                        RGBTRIPLE pixel = image[curRow][curCol];
-                        totalR
-                        count++;
-                    }
-                }
-            }
-        }
-    }
-
-    for(int i = 0; i < height; i++)
-    {
-        for(int j = 0; j < width; j++)
-        {
-            image[i][j] = temp[i][j];
-        }
-    }
-    return;
 }
+
