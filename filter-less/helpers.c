@@ -33,9 +33,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             int originalGreen = pixel.rgbt.Green;
             int originalBlue = pixel.rgbtBlue;
 
-            image[i][j] = cap(round(.393 * pixel.rgbtRed + .769 * pixel.rgbtGreen + .189 * pixel.rgbtBlue));
-            image[i][j] = cap(round(.349 * pixel.rgbtRed + .686 * pixel.rgbtGreen + .168 * pixel.rgbtBlue));
-            image[i][j] = cap(round(.272 * pixel.rgbtRed + .534 * pixel.rgbtGreen + .131 * pixel.rgbtBlue));
+            image[i][j] = cap(round(0.393 * pixel.rgbtRed + 0.769 * pixel.rgbtGreen + 0.189 * pixel.rgbtBlue));
+            image[i][j] = cap(round(0.349 * pixel.rgbtRed + 0.686 * pixel.rgbtGreen + 0.168 * pixel.rgbtBlue));
+            image[i][j] = cap(round(0.272 * pixel.rgbtRed + 0.534 * pixel.rgbtGreen + 0.131 * pixel.rgbtBlue));
         }
     }
     return;
