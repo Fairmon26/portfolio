@@ -83,7 +83,7 @@ RGBTRIPLE get_blurred_pixel(int i, int j, int height, int width, RGBTRIPLE image
             }
         }
     }
-    RGBTRIPLE blurred_pixel;
+    RGBTRIPLE get_blurred_pixel(int i, int j, int height, int width);
     blurred_pixel.rgbtRed = round((float) redValue / numOfValidPixels);
     blurred_pixel.rgbtGreen = round((float) greenValue / numOfValidPixels);
     blurred_pixel.rgbtBlue = round((float) blueValue / numOfValidPixels);
