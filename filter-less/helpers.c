@@ -16,7 +16,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     }
 }
 
-int cap (int value)
+int cap(int value)
 {
     return value > 255 ? 255 : value;
 }
