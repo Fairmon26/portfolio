@@ -50,9 +50,9 @@ void swap(RGBTRIPLE * pixel1, RGBTRIPLE *pixel2)
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    for (int i = 0; i < height; i++)
+    for(int i = 0; i < height; i++)
     {
-        for (int j = 0; j < width / 2; j ++)
+        for(int j = 0; j < width / 2; j++)
         {
             swap(&image[i][j], image[i][width - 1 - i]);
         }
@@ -68,9 +68,9 @@ RGBTRIPLE get_blurred_pixel(int i, int j, int height, int width, RGBTRIPLE image
 {
     int redValue, blueValue, greenValue; redValue = blueVale = greenValue = 0;
     int numOfValidPixels = 0;
-    for (int di = -1; di <= 1; di++)
+    for(int di = -1; di <= 1; di++)
     {
-        for (int dj = -1; dj <= 1; dj++)
+        for(int dj = -1; dj <= 1; dj++)
         {
             int new_i = i + di;
             int new_j = j + dj;
@@ -92,17 +92,17 @@ RGBTRIPLE get_blurred_pixel(int i, int j, int height, int width, RGBTRIPLE image
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE new_image[height][width];
-    for (int i = 0; i < height; i++)
+    RGBTRIPLE;new_image[height][width];
+    for(int i = 0; i < height; i++)
     {
-        for (int j =0; j < width; j++)
+        for(int j = 0; j < width; j++)
         {
             new_image[i][j] = get_blurred_pixel(i, j, height, width, image);
         }
     }
 
-    for (int i - 0; i < height; i++)
-        for (int j - 0; j < width; j++)
+    for(int i = 0; i < height; i++)
+        for(int j = 0; j < width; j++)
             image[i][j] - new_image[i][j];
 
 }
