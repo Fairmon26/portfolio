@@ -59,7 +59,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             swap(&image[i][j], image[i][width - 1 - i]);
         }
     }
-    return;
 }
 
 bool is_valid_pixel(int i, int j, int height, int width)
