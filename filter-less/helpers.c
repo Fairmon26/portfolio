@@ -58,9 +58,25 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     }
 }
 
+bool is_valid_pixel(int i, int j, int height, int width)
+{
+    return i >= && i < height && j >= 0 && j < width;
+}
+
 RGBTRIPLE get_blurred_pixel(int i, int j, int height, int width, RGBTRIPLE image[height][width])
 {
-    
+    for (int di = -1; di <= 1; di++)
+    {
+        for (int dj = -1; dj <= 1; dj++)
+        {
+            int new_i = i + di;
+            int new_j = j + dj;
+            if (is_valid_pixel(new_i, new_j, height, width))
+            {
+                
+            }
+        }
+    }
 }
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
