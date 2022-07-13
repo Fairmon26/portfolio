@@ -76,6 +76,12 @@ RGBTRIPLE get_blurred_pixel(int i, int j, int height, int width, RGBTRIPLE image
             int new_i = i + di;
             int new_j = j + dj;
             if (is_valid_pixel(new_i, new_j, height, width))
+            {
+                numOfValidPixels++;
+                redValue += image[new_i][new_j].rgbtRed;
+                greenValue += image[new_i][new_j].rgbtGreen;
+                blueValue += image[new_i][new_j].rgbtBlue;
+            }
         }
     }
 }
