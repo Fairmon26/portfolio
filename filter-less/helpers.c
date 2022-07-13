@@ -36,12 +36,21 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtBlue = cap(round(0.272 * originalRed + 0.534 originalGreen + 0.131 * originalBlue));
         }
     }
-    return;
+
 }
+
+void swap ( )
 
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width / 2; j ++)
+        {
+            swap(&image[i][j], image[i][width - 1 - i]);
+        }
+    }
     return;
 }
 
