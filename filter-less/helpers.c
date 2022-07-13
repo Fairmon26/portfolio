@@ -16,6 +16,11 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
+int cap(int value)
+{
+    return value > 255 ? 255 : value;
+}
+
 // Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -28,9 +33,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             int originalGreen = pixel.rgbt.Green;
             int originalBlue = pixel.rgbtBlue;
 
-            image[i][j] = round(.393 * pixel.rgbtRed + .769 * pixel.rgbtGreen + .189 * pixel.rgbtBlue);
-            image[i][j] = round(.349 * pixel.rgbtRed + .686 * pixel.rgbtGreen + .168 * pixel.rgbtBlue);
-            image[i][j] = round(.272 * pixel.rgbtRed + .534 * pixel.rgbtGreen + .131 * pixel.rgbtBlue);
+            image[i][j] = cap(round(.393 * pixel.rgbtRed + .769 * pixel.rgbtGreen + .189 * pixel.rgbtBlue));
+            image[i][j] = cap(round(.349 * pixel.rgbtRed + .686 * pixel.rgbtGreen + .168 * pixel.rgbtBlue));
+            image[i][j] = cap(round(.272 * pixel.rgbtRed + .534 * pixel.rgbtGreen + .131 * pixel.rgbtBlue));
         }
     }
     return;
