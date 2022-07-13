@@ -64,7 +64,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 
 RGBTRIPLE get_blurred_pixel(int i, int j, int height, int width, RGBTRIPLE image[height][width])
 {
-    for 
+    for (int di = -1; di <= 1; di++)
+    {
+        for (int dj = -1; dj <= 1; dj++)
+        {
+            if (is_valid_pixel)
+        }
+    }
 }
 
 // Blur image
