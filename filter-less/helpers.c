@@ -92,7 +92,6 @@ RGBTRIPLE get_blurred_pixel(int i, int j, int height, int width, RGBTRIPLE image
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIP
     RGBTRIPLE new_image[height][width];
     for (int i = 0; i < height; i++)
     {
