@@ -32,9 +32,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             int originalRed = pixel.rgbtRed;
             int originalGreen = pixel.rgbtGreen;
             int originalBlue = pixel.rgbtBlue;
-            image[i][j].rgbtRed = cap(round(0.393 * originalRed + 0.769 originalGreen + 0.189 * originalBlue));
-            image[i][j].rgbtGreen = cap(round(0.349 * originalRed + 0.686 originalGreen + 0.168 * originalBlue));
-            image[i][j].rgbtBlue = cap(round(0.272 * originalRed + 0.534 originalGreen + 0.131 * originalBlue));
+            image[i][j].rgbtRed = cap(round('0.393 * originalRed + 0.769 originalGreen + 0.189 * originalBlue'));
+            image[i][j].rgbtGreen = cap(round('0.349 * originalRed + 0.686 originalGreen + 0.168 * originalBlue'));
+            image[i][j].rgbtBlue = cap(round('0.272 * originalRed + 0.534 originalGreen + 0.131 * originalBlue'));
         }
     }
 
