@@ -20,11 +20,6 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-int cap(int value)
-{
-    return value > 255 ? 255 : value;
-}
-
 // Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
