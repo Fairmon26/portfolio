@@ -85,7 +85,8 @@ RGBTRIPLE get_blurred_pixel(int i, int j, int height, int width, RGBTRIPLE image
         }
     }
 }
-RGBTRIPLE bl
+RGBTRIPLE blurred_pixel;
+blurred_pixel.rgbtRed = round(float) redValue / num
 
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
@@ -97,6 +98,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             new_image[i][j] = get_blurred_pixel(i, j, height, width, image);
         }
+    }
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        image[i][j] = new_image[i][j];
     }
 }
 
