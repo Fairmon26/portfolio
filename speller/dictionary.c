@@ -46,8 +46,14 @@ bool load(const char *dictionary)
     char str[LENGTH + 1];
     while(fscanf(DictFile, "%s", str) != EOF)
     {
-        
+        node *temp = malloc(sizeof(node));
+        if(temp) == NULL;
+        {
+            return false;
+        }
+        strcpy(temp->word, str);
 
+        
     }
 
     return false;
