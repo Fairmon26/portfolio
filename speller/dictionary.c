@@ -55,7 +55,14 @@ bool load(const char *dictionary)
 
         int hashNum = hash(str);
 
-        
+        if(table(hashNum) == NULL)
+        {
+            temp->next = NULL;
+        }
+        else
+        {
+            
+        }
     }
 
     return false;
