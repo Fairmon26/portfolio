@@ -25,6 +25,11 @@ bool check(const char *word)
 {
     // TODO
     int hashNum = hash(word);
+    node *cursor  = table[hashNum];
+    while(cursor != NULL)
+    {
+        
+    }
     return false;
 }
 
