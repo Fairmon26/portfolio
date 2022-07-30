@@ -61,8 +61,10 @@ bool load(const char *dictionary)
         }
         else
         {
-            
+            temp->next = table(hashNum);
         }
+
+        table()
     }
 
     return false;
