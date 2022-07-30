@@ -54,7 +54,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *DictFile = fopen(dictionary, 'r');
+    FILE *DictFile = fopen(dictionary, "r");
     if(DictFile == NULL)
     {
         return false;
