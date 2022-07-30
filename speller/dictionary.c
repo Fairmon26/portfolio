@@ -55,19 +55,19 @@ bool load(const char *dictionary)
 
         int hashNum = hash(str);
 
-        if(table(hashNum) == NULL)
+        if(table[hashNum] == NULL)
         {
             temp->next = NULL;
         }
         else
         {
-            temp->next = table(hashNum);
+            temp->next = table[hashNum];
         }
 
-        table()
+        table[hashNum] = temp;
     }
-
-    return false;
+    fclose(DictFile);
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
