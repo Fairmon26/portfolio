@@ -66,6 +66,8 @@ bool load(const char *dictionary)
         }
 
         table[hashNum] = temp;
+
+        countword += 1;
     }
     fclose(DictFile);
     return true;
