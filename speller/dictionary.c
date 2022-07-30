@@ -2,7 +2,10 @@
 
 #include <ctype.h>
 #include <stdbool.h>
-
+#include <stdio.h>
+#include <strings.h>
+#include <stdlib.h>
+#include <string.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -96,7 +99,11 @@ unsigned int size(void)
 
 void freenode(node *n)
 {
-    
+    if(n->next != NULL)
+    {
+        freenode(n->next);
+    }
+    free(n);
 }
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
