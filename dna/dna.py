@@ -26,18 +26,22 @@ def main():
         matches.append(longest_match(sequence, database[0][i]))
 
     # TODO: Check database for matching profiles
-    dna_fingerprint = {}
-    for str in strs:
-        dna_fingerprint[str] = consec_repeats(str, dna)
+    suspect = 'No Macth'
+    suspect_counter = 0
 
-        for row in database_reader:
-            if match(strs, dna_fingerprint, row):
-                print(f"{row['name']}")
-                database_file.close()
-                return
+    for i in range(1, len(database)):
+        for j in range(len(matches)):
+            if matches[j] == int(database[i][j + 1]):
+                suspect_counter += 1
 
-        print("No match")
-        database
+        if suspect_counter == len(matches):
+            suspect = database[i][0]
+            break
+        else:
+            suspect_counter = 0
+     print(suspect)
+
+     return
 
 
 
