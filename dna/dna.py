@@ -31,6 +31,15 @@ def main():
                 database_file.close()
                 return
 
+        print("No match")
+        database_file.close()
+
+     def consec_repeat(str, dna):
+        i = 0
+        while str*(i + 1) in dna:
+            i += 1
+        return i
+
     return
 
 
