@@ -1,5 +1,5 @@
 import csv
-import sys
+from sys import argv
 
 
 def main():
@@ -24,6 +24,12 @@ def main():
     dna_fingerprint = {}
     for str in strs:
         dna_fingerprint[str] = consec_repeats(str, dna)
+
+        for row in database_reader:
+            if match(strs, dna_fingerprint, row):
+                print(f"{row['name']}")
+                database_file.close()
+                return
 
     return
 
