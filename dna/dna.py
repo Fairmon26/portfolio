@@ -15,7 +15,7 @@ def main():
     # TODO: Read database file into a variable
     def get_max(dna, STR):
         i = 0
-        j = len(STR):
+        j = len(STR)
         max = 0
         for x in range(len(dna)):
             if dna[i:j] == STR:
@@ -27,7 +27,7 @@ def main():
             else:
                 i + 1
                 j + 1
-         return max
+            return max
 
     # TODO: Read DNA sequence file into a variable
     with open(argv[2], 'r') as dnafile:
@@ -61,9 +61,9 @@ def main():
                 print(person["name"])
                 exit(0)
 
-         print(""No match)
+            print("No match")
 
-   
+
 
 
 def longest_match(sequence, subsequence):
