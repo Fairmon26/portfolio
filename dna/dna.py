@@ -10,7 +10,7 @@ def main():
 
     # TODO: Read database file into a variable
     database_file = open("./" + argv[1])
-    dna_filen = open("./" + argv[2])
+    dna_file = open("./" + argv[2])
 
     # TODO: Read DNA sequence file into a variable
     database_reader = csv.DictReader(database_file)
