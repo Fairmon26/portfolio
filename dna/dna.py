@@ -29,9 +29,9 @@ def main():
     suspect = 'No Macth'
     suspect_counter = 1
 
-    for i in range(1, len(database)):
-        for j in range(len(matches)):
-            if matches[j] == int(database[i][j + 1]):
+    for i in range(len(database)):
+        for j in matches:
+            if str(matches[j]) == database[i][j]:
                 suspect_counter += 1
 
         if suspect_counter == len(matches):
