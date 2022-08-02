@@ -1,5 +1,5 @@
 import csv
-import sys
+from sys import argv
 
 
 def main():
@@ -10,16 +10,20 @@ def main():
         exit()
 
     # TODO: Read database file into a variable
-    
+    with open (argv[1]) as e:
+        reader = csv.reader(e)
+        database = list(reader)
+
 
 
     # TODO: Read DNA sequence file into a variable
-    database_reader = csv.DictReader(database_file)
-    strs = database_reader.filenames[1:]
+    with open(argv[2]) as f:
+        sequence = f.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    dna = dna_file.read()
-    dna_file.close()
+    matches = []
+    for i in range(1, len(database[0])):
+        matches.append(longest_match(sequence, database[0][i]))
 
     # TODO: Check database for matching profiles
     dna_fingerprint = {}
@@ -33,19 +37,7 @@ def main():
                 return
 
         print("No match")
-        database_file.close()
-
-    def consec_repeat(str, dna):
-        i = 0
-        while str*(i + 1) in dna:
-            i += 1
-        return i
-
-    def match(strs, dna_fingerprint, row):
-        for str in strs:
-            if dna_fingerprint[str] != int(row[str]):
-                return false
-        return True
+        database
 
 
 
