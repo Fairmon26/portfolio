@@ -40,7 +40,13 @@ def main():
             i += 1
         return i
 
-    return
+     def match(strs, dna_fingerprint, row):
+        for str in strs:
+            if dna_fingerprint[str] != int(row[str]):
+                return false
+        return True
+
+    
 
 
 def longest_match(sequence, subsequence):
