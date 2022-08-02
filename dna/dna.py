@@ -52,7 +52,7 @@ def main():
         sequences[key] = ans
 
 
-    with open(argv[1], 'r') as peoplefile:
+    with open(argv[1], "r") as peoplefile:
         people = DictReader(peoplefile)
         for person in people:
             match = 0
