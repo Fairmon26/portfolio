@@ -53,8 +53,8 @@ def main():
         people = DictReader(peoplefile)
         for person in people:
             match = 0
-            for key in sequence:
-                if int(person[key]) == sequence[key]:
+            for key in sequences:
+                if int(person[key]) == sequences[key]:
                     match += 1
 
             if match == len(sequences):
