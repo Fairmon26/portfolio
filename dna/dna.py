@@ -34,7 +34,7 @@ def main():
         dna = dnafile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    with open(argv[1], 'r') as peoplefile:
+    with open(argv[1], 'r') as peopleFile:
         peopleReader = reader(peopleFile)
         for row in peopleReader:
             header = row
@@ -49,12 +49,12 @@ def main():
         sequences[key] = ans
 
 
-    with opem(argv[1], 'r') as peoplefile:
+    with open(argv[1], 'r') as peoplefile:
         people = DictReader(peoplefile)
         for person in people:
             match = 0
             for key in sequence:
-                if int(person[key]) == sequences[key]:
+                if int(person[key]) == sequence[key]:
                     match += 1
 
             if match == len(sequences):
