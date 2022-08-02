@@ -34,7 +34,7 @@ def main():
         print("No match")
         database_file.close()
 
-     def consec_repeat(str, dna):
+    def consec_repeat(str, dna):
         i = 0
         while str*(i + 1) in dna:
             i += 1
@@ -46,7 +46,7 @@ def main():
                 return false
         return True
 
-    
+
 
 
 def longest_match(sequence, subsequence):
