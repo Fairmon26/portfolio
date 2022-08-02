@@ -32,6 +32,7 @@ def main():
     # TODO: Read DNA sequence file into a variable
     with open(argv[2], 'r') as dnafile:
         dna = dnafile.read()
+        max = get_max(dna, "AGATC")
 
     # TODO: Find longest match of each STR in DNA sequence
     with open(argv[1], 'r') as peopleFile:
