@@ -35,7 +35,7 @@ def main():
                 suspect_counter += 1
 
         if suspect_counter == len(matches):
-            suspect = database[i][0]
+            suspect = database[i]['name']
             break
         else:
             suspect_counter = 0
