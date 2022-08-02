@@ -40,7 +40,7 @@ def main():
             i += 1
         return i
 
-     def match(strs, dna_fingerprint, row):
+    def match(strs, dna_fingerprint, row):
         for str in strs:
             if dna_fingerprint[str] != int(row[str]):
                 return false
