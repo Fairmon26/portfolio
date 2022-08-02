@@ -19,7 +19,9 @@ def main():
         max = 0
         for x in range(len(dna)):
             if dna[i:j] == STR:
-                temp += 1
+                temp = 0
+                while dna[i:j] == STR:
+                    temp += 1
                 i += len(STR)
                 j += len(STR)
                 if(temp > max):
