@@ -11,7 +11,7 @@ def main():
 
     # TODO: Read database file into a variable
     with open (argv[1]) as e:
-        reader = csv.reader(e)
+        reader = csv.DictReader(e)
         database = list(reader)
 
 
@@ -21,13 +21,13 @@ def main():
         sequence = f.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    matches = []
-    for i in range(1, len(database[0])):
-        matches.append(longest_match(sequence, database[0][i]))
+    matches = {}
+    for i in database[0]:
+        matches[i] = (longest_match(sequence, i))
 
     # TODO: Check database for matching profiles
     suspect = 'No Macth'
-    suspect_counter = 0
+    suspect_counter = 1
 
     for i in range(1, len(database)):
         for j in range(len(matches)):
