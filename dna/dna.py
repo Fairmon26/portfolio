@@ -1,16 +1,16 @@
 import csv
-from sys import argv
+import sys
 
 
 def main():
 
     # TODO: Check for command-line usage
-    if len(argv) != 3:
-        print("Usage: python dna.py data.csv sequence.txt")
+    if len(sys.argv) < 3:
+        sys.exit("Usage: python dna.py data.csv sequence.txt")
 
     # TODO: Read database file into a variable
-    database_file = open("./" + argv[1])
-    dna_file = open("./" + argv[2])
+    database, sequence = load_files(sys.argv[1], sys.argv[2])
+
 
     # TODO: Read DNA sequence file into a variable
     database_reader = csv.DictReader(database_file)
