@@ -38,7 +38,9 @@ def main():
         print(strs_count)
 
         for person in reader:
-            print(person)
+            name = person['name']
+
+            for STR
 
 
 
