@@ -14,7 +14,9 @@ def main():
     with open(sys.argv[1]) as csvfile:
         reader = csv.DictReader(csvfile)
         strs_tested = reader.fieldnames[1:]
-        print(strs_tested)
+        strs_count = {}
+
+        {'AGATC': 1, 'AATG': 4, 'TATC': }
 
 
     # TODO: Read DNA sequence file into a variable
