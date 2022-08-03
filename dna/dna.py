@@ -18,7 +18,7 @@ def main():
         dna_sequence = csv.DictReader(f2)
 
     # TODO: Find longest match of each STR in DNA sequence
-    subsequences = data.filenames[1:]
+    subsequences = data.fieldnames[1:]
     for subsequence in subsequences:
         longest_str[subsequence] = longest_match(str(dna_sequence), subsequence)
     print(longest_str)
