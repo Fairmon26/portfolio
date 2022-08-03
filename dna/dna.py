@@ -40,7 +40,8 @@ def main():
         for person in reader:
             name = person['name']
 
-            for STR
+            for STR in strs_tested:
+                print(STR)
 
 
 
