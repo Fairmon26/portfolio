@@ -37,9 +37,9 @@ def main():
             strs_count[STR] = longest_sequence
 
 
-        print(strs_count)
+
         for person in reader:
-            print(person)
+
             name = person['name']
             is_found = True
 
@@ -51,6 +51,8 @@ def main():
             if is_found:
                 print(name)
                 sys.exit(0)
+
+        print('No match')
 
 
 
