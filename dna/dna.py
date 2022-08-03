@@ -26,7 +26,13 @@ def main():
 
                 if current_str == STR:
                     current_sequence += 1
-                    
+                    index += len(STR)
+                else:
+                    if current_sequence > longest_sequence:
+                        longest_sequence = current_sequence
+
+                    current_sequence = 0
+                    index += 1
 
 
 
