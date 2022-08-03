@@ -34,7 +34,8 @@ def main():
                     current_sequence = 0
                     index += 1
 
-          strs_count[STR] = longest_sequence
+            strs_count[STR] = longest_sequence
+        print(strs_count)
 
 
 
