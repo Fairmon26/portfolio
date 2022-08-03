@@ -19,9 +19,15 @@ def main():
         for STR in strs_tested:
             index = 0
             longest_sequence = 0
+            current_sequence = 0
 
             while index < len(dna):
-                
+                current_str = dna[index: index + len(STR)]
+
+                if current_str == STR:
+                    current_sequence += 1
+                    
+
 
 
     # TODO: Read DNA sequence file into a variable
