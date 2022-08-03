@@ -36,6 +36,7 @@ def main():
 
             strs_count[STR] = longest_sequence
         print(strs_count)
+
         for person in reader:
             print(person)
 
