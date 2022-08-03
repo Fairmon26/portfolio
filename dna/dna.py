@@ -16,7 +16,8 @@ def main():
         strs_tested = reader.fieldnames[1:]
         strs_count = {}
 
-        {'AGATC': 1, 'AATG': 4, 'TATC': }
+        for STR in strs_tested:
+            print(STR)
 
 
     # TODO: Read DNA sequence file into a variable
