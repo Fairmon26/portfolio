@@ -17,7 +17,8 @@ def main():
         strs_count = {}
 
         for STR in strs_tested:
-            print(STR)
+            index = 0
+            longest_sequence
 
 
     # TODO: Read DNA sequence file into a variable
