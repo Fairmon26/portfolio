@@ -35,16 +35,19 @@ def main():
                     index += 1
 
             strs_count[STR] = longest_sequence
-        print(strs_count)
+
 
         print(strs_count)
         for person in reader:
             print(person)
             name = person['name']
+            is_found = True
 
             for STR in strs_tested:
                 if int(person[STR]) != strs_count[STR]:
-                    print('Wrong number')
+                    is_found = False
+                    break
+
 
 
 
