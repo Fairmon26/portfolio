@@ -37,11 +37,14 @@ def main():
             strs_count[STR] = longest_sequence
         print(strs_count)
 
+        print(strs_count)
         for person in reader:
             print(person)
             name = person['name']
 
             for STR in strs_tested:
+                if int(person[STR]) != strs_count[STR]:
+                    print('Wrong number')
 
 
 
@@ -57,7 +60,7 @@ def main():
 
     # TODO: Check database for matching profiles
 
-    
+
 
 
 def longest_match(sequence, subsequence):
