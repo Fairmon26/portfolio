@@ -48,6 +48,10 @@ def main():
                     is_found = False
                     break
 
+            if is_found:
+                print(name)
+                sys.exit(0)
+
 
 
 
