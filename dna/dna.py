@@ -34,6 +34,11 @@ def main():
                     current_sequence = 0
                     index += 1
 
+          strs_count[STR] = longest_sequence
+
+
+
+
 
 
     # TODO: Read DNA sequence file into a variable
