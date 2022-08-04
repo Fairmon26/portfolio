@@ -1,3 +1,3 @@
-select count(*) as NumOfMoviesWith10.0Rating
+select count(*) as NumOfMoviesWithRating
 from ratings
 where rating = 10.0
