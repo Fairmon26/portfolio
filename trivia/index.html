@@ -26,6 +26,9 @@
                         currentBtnElement.style.background = 'red';
                         newH4Element.textContent = 'Incorrect';
                     }
+
+                    let divElement = currentBtnElement.parentElement;
+                    divElement.appendChild(newH4Element);
                 }
             })
         </script>
@@ -46,7 +49,6 @@
                 <button class="multiple incorrect">Random person 2</button>
                 <button class="multiple incorrect">Random person 3</button>
 
-                <h4></h4>
             </div>
 
             <div class="section">
