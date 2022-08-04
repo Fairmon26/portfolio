@@ -11,7 +11,10 @@
                 console.log('hi');
 
                 let btnElements = document.querySelectorAll('.multiple');
-                console.log(btnElements);
+
+                for (let btnElement of btnElements) {
+                    btnElement.addEventListener('click', multipleChoice);
+                }
             })
         </script>
     </head>
