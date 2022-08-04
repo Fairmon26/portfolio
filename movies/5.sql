@@ -1,4 +1,4 @@
 select title, year
-from voies
+from movies
 where title like "Harry Potter%"
 order by year
