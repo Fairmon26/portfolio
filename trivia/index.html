@@ -13,12 +13,11 @@
                 let btnElements = document.querySelectorAll('.multiple');
 
                 for (let btnElement of btnElements) {
-                    btnElement.addEventListener('click', multipleChoice);
+                    btnElement.addEventListener('click', event => multipleChoice(event));
                 }
 
-                function multipleChoice() {
-                    console.log('on multiple choice click');
-
+                function multipleChoice(event) {
+                    console.log(event);
                 }
             })
         </script>
