@@ -18,9 +18,11 @@
 
                 function multipleChoice(event) {
                     const currentBtnElement = event.target;
+                    let newH4Element = document.createElement('h4');
 
                     if (btnElement.classList.contains('correct')) {
                         currentBtnElement.style.background = 'green';
+                        newH4Element.textContent = 'Correct!';
                     }
                     else{
                         currentBtnElement.style.background = 'red';
