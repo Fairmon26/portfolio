@@ -39,12 +39,16 @@
                 function freeResponse() {
                     let answerInputElement = document.querySelector('#free-response');
                     let answer = answerInputElement.value;
+                    let newH4Element = document.createElement('h4');
+
 
                     if (answer == 'yes') {
                         answerInputElement.style.background = 'green';
+                        newH4Element.textContent = 'Correct!';
                     }
                     else {
                         answerInputElement.style.background = 'red';
+                        newH4Element.textContent = 'Incorrect.';
                     }
 
                 }
