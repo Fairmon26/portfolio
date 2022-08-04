@@ -17,10 +17,13 @@
                 }
 
                 function multipleChoice(event) {
-                    const currentbtnElement = event.target;
+                    const currentBtnElement = event.target;
 
                     if (btnElement.classList.contains('correct')) {
-                        currentbtnElement.style.background = 'green';
+                        currentBtnElement.style.background = 'green';
+                    }
+                    else{
+                        currentBtnElement.style.background = 'red';
                     }
                 }
             })
