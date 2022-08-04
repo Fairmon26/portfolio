@@ -22,3 +22,10 @@ join atm_transactions on atm_transactions.account_number = bank_accounts.account
 where year = 2021 and month 7 and day = 28 and atm_location = "Leggett Street" and
 transaction_type = "withdraw"
 
+select name
+from people
+join passengers on passengers.passort_number = people.passport_number
+where passengers.flight_id = (select id from flights where year = 2021 and month = 7 and day = 29 and origin_airport_id = (select id from airports where city = "Fiftyville")
+order by hour,minute
+limit 1)
+
