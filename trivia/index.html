@@ -9,10 +9,14 @@
             // TODO: Add code to check answers to questions
             documents.addEventListener('DOMContentLoaded', function listen() {
                 let btnElements = document.querySelectorAll('.multiple');
+                let submitBtnElement = document.querySelector('#confirm-btn');
+
 
                 for (let btnElement of btnElements) {
                     btnElement.addEventListener('click', event => multipleChoice(event));
                 }
+
+                submitBtnElement.addEventListener()
 
                 function multipleChoice(event) {
                     const currentBtnElement = event.target;
