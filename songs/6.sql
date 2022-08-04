@@ -1,0 +1,2 @@
+select names
+from songs
