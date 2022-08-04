@@ -1,3 +1,3 @@
-select id
-from artists
-where name = 'Post Malone'
+select name
+from songs
+where artist_id = 'Post Malone'
