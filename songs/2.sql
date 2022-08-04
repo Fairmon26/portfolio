@@ -1,3 +1,3 @@
 select name
 from songs
-group by tempo
+order by tempo
