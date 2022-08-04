@@ -15,3 +15,10 @@ and activity = "exit"
 
 --suspects: Vanessa, Bruce, Barry, Luca, Sofia, Iman, Diana, Kelsey
 
+select name
+from people
+join bank_accounts on bank_accounts.person_id = people.id
+join atm_transactions on atm_transactions.account_number = bank_accounts.account_number
+where year = 2021 and month 7 and day = 28 and atm_location = "Leggett Street" and
+transaction_type = "withdraw"
+
