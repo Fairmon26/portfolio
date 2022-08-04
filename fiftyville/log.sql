@@ -31,3 +31,9 @@ limit 1)
 
 --suspects: Doris, Sofia, Bruce, Edward, Kelsey, Taylor, Kenny, Luca
 --common suspects: Bruce, Luca
+
+select city from airports
+where id = (select destination_airport_id from flights where year = 2021 and month = 7 and day = 29 and origin_airport_id = (select
+id from airports where city = "Fiftyville")
+order by hour,minute
+limit 1)
