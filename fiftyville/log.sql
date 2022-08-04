@@ -29,3 +29,5 @@ where passengers.flight_id = (select id from flights where year = 2021 and month
 order by hour,minute
 limit 1)
 
+--suspects: Doris, Sofia, Bruce, Edward, Kelsey, Taylor, Kenny, Luca
+--common suspects: Bruce, Luca
