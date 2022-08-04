@@ -1,3 +1,3 @@
 select name
 from songs
-where name like "%feat"
+where name like "%feat%"
