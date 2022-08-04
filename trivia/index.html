@@ -37,7 +37,13 @@
                 }
 
                 function freeResponse() {
-                    let an
+                    let answerInputElement = document.querySelector('#free-response');
+                    let answer = answerInputElement.value;
+
+                    if (answer == 'yes') {
+                        answerInputElement.style.background = 'green';
+                    }
+                    else
 
                 }
 
