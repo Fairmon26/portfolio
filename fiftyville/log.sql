@@ -32,6 +32,13 @@ limit 1)
 --suspects: Doris, Sofia, Bruce, Edward, Kelsey, Taylor, Kenny, Luca
 --common suspects: Bruce, Luca
 
+select name
+from people
+join phone_calls on phone_calls.caller = people.phone_number
+where year = 2021 and month = 7 and day = 28 and duration < 60
+
+
+
 select city from airports
 where id = (select destination_airport_id from flights where year = 2021 and month = 7 and day = 29 and origin_airport_id = (select
 id from airports where city = "Fiftyville")
