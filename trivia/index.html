@@ -17,7 +17,11 @@
                 }
 
                 function multipleChoice(event) {
-                    console.log(event);
+                    const currentbtnElement = event.target;
+
+                    if (btnElement.classList.contains('correct')) {
+                        currentbtnElement.style.background = 'green';
+                    }
                 }
             })
         </script>
