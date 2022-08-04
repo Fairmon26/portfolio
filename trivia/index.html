@@ -50,7 +50,8 @@
                         newH4Element.textContent = 'Incorrect.';
                     }
 
-                    answerInputElement
+                    let divElement = answerInputElement.parentElement;
+                    divElement.appendChild(newH4Element);
 
                 }
 
