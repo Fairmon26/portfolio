@@ -19,7 +19,21 @@
                     arrowr.style.visibilty = 'hidden';
                 }
             }
-    </head>
+            function blinkl()
+            {
+                let arrowl = document.querySelector('#arrowleft');
+                if (arrowl.style.visibility === 'hidden')
+                {
+                    arrowl.style.visibilty = 'visible';
+                }
+                else
+                {
+                    arrowl.style.visibility = 'hidden';
+                }
+            }
+            window.setInterval(blinkr,600);
+            window.setInterval(blinkl,600;)
+    <script>
     <body>
         hello, homepage
     </body>
