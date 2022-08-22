@@ -68,7 +68,13 @@ def buy():
         if shares < 0:
             return apology("Share Not Allowed")
 
-          
+        transaction_value = shares * stock["price"]
+
+        user_id = session["user_id"]
+        user_cash_db = db.execute("SELECT cash FROM users Where id = :id", id = user_id)
+        return jsonify(user_cash_db)
+
+
 
 
 
