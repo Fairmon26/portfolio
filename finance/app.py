@@ -224,3 +224,6 @@ def sell():
         symbols_users = db.execute("SELECT symbole FROM transaction WHERE user_id = :id GROUP BY symbol HAVING SUM(shares) > 0" , id = user_id)
         return render_template("sell.html", symbols = [row["symbol"]for row in symbols_user])
 
+    else:
+        
+
