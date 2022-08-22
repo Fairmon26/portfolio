@@ -10,7 +10,8 @@
         <div class="mb-3">
             <select name = "symbol">
                 {% for symbol in symbols %}
-                <option value = ""></option>
+                    <option value = "{{ symbol }}">{{ symbol }}</option>
+                {% endfor %}
             </select>
         </div>
         <div class="mb-3">
