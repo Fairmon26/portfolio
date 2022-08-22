@@ -127,8 +127,6 @@ def add_cash():
         user_id = session["user_id"]
         
 
-
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""
