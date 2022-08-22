@@ -121,7 +121,11 @@ def add_cash():
     else:
         new_cash = request.form.get("new_cash")
 
-        if 
+        if not new_cash:
+            return apology("You Must Add Money")
+
+        user_id = session["user_id"]
+        
 
 
 
