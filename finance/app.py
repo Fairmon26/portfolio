@@ -62,7 +62,7 @@ def buy():
 
     else:
         symbol = request.form.get("symbol")
-        shares = int(float(request.form.get("shares")))
+        shares = float(request.form.get("shares"))
 
         if not symbol:
             return apology("Must Give Symbol")
