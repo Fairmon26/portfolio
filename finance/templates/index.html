@@ -11,7 +11,7 @@
             <th scope = "col">Symbols</th>
             <th scope = "col">Shares</th>
             <th scope = "col">Price</th>
-         </tr>
+          </tr>
         </thead>
         <tbody>
              {% for row in database %}
@@ -22,13 +22,4 @@
              </tr>
              {% endfor %}
         </tbody>
-        <tfoot>
-            <tr>
-                <td></td>
-                <td></td>
-                <th scope = "1">Total Amount</th>
-                <th scope = "1">{{ cash }}</th>
-            </tr>
-        </tfoot>
-     </table>
-{% endblock %}
+
