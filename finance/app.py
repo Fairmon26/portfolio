@@ -70,6 +70,8 @@ def buy():
 
         transaction_value = shares * float(stock["price"])
 
+        
+
 
 
 @app.route("/history")
