@@ -106,6 +106,12 @@ def history():
     transactions_db = db.execute("SELECT * FROM transactions WHERE user_id = :id", id = user_id)
     return render_template("history.html", transactions = transactions_db)
 
+@app.route("/add_money", methods=["GET","POST"])
+@login_required
+def add_money():
+    """User can add money"""
+    
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
