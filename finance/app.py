@@ -231,8 +231,6 @@ def sell():
         if shares < 0:
             return apology("Share Not Allowed")
 
-
-
         transaction_value = shares * float(stock["price"])
 
         user_id = session["user_id"]
