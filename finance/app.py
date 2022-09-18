@@ -258,7 +258,7 @@ def sell():
 
         user_id = session["user_id"]
         user_cash_db = db.execute("SELECT cash FROM users Where id = :id", id = user_id)
-        user_cash = user_cash_db[0]["cash"]
+        user_cash = usd(user_cash_db[0]["cash"])
 
         user_shares = db.execute("SELECT shares FROM transactions WHERE user_id = :id AND symbol = :symbol GROUP BY symbol", id = user_id, symbol = symbol)
         user_shares_real = user_shares[0]["shares"]
