@@ -75,7 +75,7 @@ def buy():
         if shares <= 0:
             return apology("Share Not Allowed")
 
-        transaction_value = shares * usd(float(stock["price"]))
+        transaction_value = shares * stock["price"]
 
         user_id = session["user_id"]
         user_cash_db = db.execute("SELECT cash FROM users Where id = :id", id = user_id)
@@ -90,7 +90,7 @@ def buy():
 
         date = datetime.datetime.now()
 
-        float(db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], shares, usd(float(stock["price"])), date))
+        float(db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], shares, stock["price"], date))
 
         flash("Bought!")
 
@@ -254,7 +254,7 @@ def sell():
         if shares <= 0:
             return apology("Share Not Allowed")
 
-        transaction_value = shares * usd(float(stock["price"]))
+        transaction_value = shares * stock["price"]
 
         user_id = session["user_id"]
         user_cash_db = db.execute("SELECT cash FROM users Where id = :id", id = user_id)
@@ -272,7 +272,7 @@ def sell():
 
         date = datetime.datetime.now()
 
-        float(db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], (-1) * shares, usd(float(stock["price"])), date))
+        float(db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], (-1) * shares, stock["price"], date))
 
         flash("Sold!")
 
