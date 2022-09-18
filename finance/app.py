@@ -72,7 +72,7 @@ def buy():
         if stock == None:
             return apology("Symbol Does Not Exist")
 
-        if shares < 0:
+        if shares <= 0:
             return apology("Share Not Allowed")
 
         transaction_value = shares * usd(float(stock["price"]))
@@ -251,7 +251,7 @@ def sell():
         if stock == None:
             return apology("Symbol Does Not Exist")
 
-        if shares < 0:
+        if shares <= 0:
             return apology("Share Not Allowed")
 
         transaction_value = shares * usd(float(stock["price"]))
