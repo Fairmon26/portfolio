@@ -5,6 +5,7 @@ from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
+import datetime
 
 from helpers import apology, login_required, lookup, usd
 
@@ -111,7 +112,45 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-    return apology("TODO")
+    if request.method == "GET":
+        return render_template("buy.html")
+
+    else:
+        symbol = request.form.get("symbol")
+        shares = int(request.form.get("shares"))
+
+        if not symbol:
+            return apology("Must Give Symbol")
+
+        stock = lookup(symbol.upper())
+
+        if stock == None:
+            return apology("Symbol Does Not Exist")
+
+        if shares < 0:
+            return apology("Share Not Allowed")
+
+        transaction_value = shares * float(stock["price"])
+
+        user_id = session["user_id"]
+        user_cash_db = db.execute("SELECT cash FROM users Where id = :id", id = user_id)
+        user_cash = user_cash_db[0]["cash"]
+
+        if user_cash < transaction_value:
+            return apology("Not Enough Money")
+
+        uptd_cash = user_cash - transaction_value
+
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", uptd_cash, user_id)
+
+        date = datetime.datetime.now()
+
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], shares, float(stock["price"]), date)
+
+        flash("Bought!")
+
+        return redirect("/")
+
 
 
 @app.route("/register", methods=["GET", "POST"])
