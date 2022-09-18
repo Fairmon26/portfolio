@@ -233,19 +233,17 @@ def sell():
 
 
 
-        transaction_value = shares * stock["price"]
+        transaction_value = shares * float(stock["price"])
 
         user_id = session["user_id"]
         user_cash_db = db.execute("SELECT cash FROM users Where id = :id", id = user_id)
         user_cash = user_cash_db[0]["cash"]
 
-        user_shares = db.execute("SELECT shares FROM transaction WHERE user_id = :id AND symbol = :symbol GROUP BY symbol", id = user_id, symbol = symbol)
+        user_shares = db.execute("SELECT shares FROM transactions WHERE user_id = :id AND symbol = :symbol GROUP BY symbol", id = user_id, symbol = symbol)
         user_shares_real = user_shares[0]["shares"]
 
         if shares > user_shares_real:
             return apology("You Do Not Have This Amount Of Shares")
-
-
 
         uptd_cash = user_cash + transaction_value
 
@@ -253,7 +251,7 @@ def sell():
 
         date = datetime.datetime.now()
 
-        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], (-1) * shares, stock["price"], date)
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], (-1) * shares, float(stock["price"]), date)
 
         flash("Sold!")
 
