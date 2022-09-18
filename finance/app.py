@@ -62,7 +62,7 @@ def buy():
 
     else:
         symbol = request.form.get("symbol")
-        shares = int(request.form.get("shares"))
+        shares = print(int(request.form.get("shares")))
 
         if not symbol:
             return apology("Must Give Symbol")
@@ -241,7 +241,7 @@ def sell():
 
     else:
         symbol = request.form.get("symbol")
-        shares = int(request.form.get("shares"))
+        shares = print(int(request.form.get("shares")))
 
         if not symbol:
             return apology("Must Give Symbol")
@@ -254,7 +254,7 @@ def sell():
         if shares < 0:
             return apology("Share Not Allowed")
 
-        transaction_value = shares * float(stock["price"])
+        transaction_value = shares * usd(float(stock["price"]))
 
         user_id = session["user_id"]
         user_cash_db = db.execute("SELECT cash FROM users Where id = :id", id = user_id)
