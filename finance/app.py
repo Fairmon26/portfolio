@@ -261,7 +261,7 @@ def sell():
         user_cash = usd(user_cash_db[0]["cash"])
 
         user_shares = db.execute("SELECT shares FROM transactions WHERE user_id = :id AND symbol = :symbol GROUP BY symbol", id = user_id, symbol = symbol)
-        user_shares_real = user_shares[0]["shares"]
+        user_shares_real = usd(user_shares[0]["shares"])
 
         if shares > user_shares_real:
             return apology("You Do Not Have This Amount Of Shares")
