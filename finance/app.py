@@ -75,7 +75,7 @@ def buy():
         if shares < 0:
             return apology("Share Not Allowed")
 
-        transaction_value = shares * usd(float(stock["price"]))
+        transaction_value = shares * float(stock["price"])
 
         user_id = session["user_id"]
         user_cash_db = db.execute("SELECT cash FROM users Where id = :id", id = user_id)
@@ -90,7 +90,7 @@ def buy():
 
         date = datetime.datetime.now()
 
-        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], shares, usd(float(stock["price"])), date)
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], shares, float(stock["price"]), date)
 
         flash("Bought!")
 
@@ -193,7 +193,7 @@ def quote():
         if stock == None:
             return apology("Symbol Does Not Exist")
 
-        return render_template("quoted.html", name = stock["name"], price = usd(float(stock["price"])), symbol = stock["symbol"])
+        return render_template("quoted.html", name = stock["name"], price = float(stock["price"]), symbol = stock["symbol"])
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
