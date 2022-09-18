@@ -122,7 +122,7 @@ def add_money():
         user_cash_db = db.execute("SELECT cash FROM users Where id = :id", id = user_id)
         user_cash = user_cash_db[0]["cash"]
 
-        uptd_cash = user_cash + new_cash
+        uptd_cash = user_cash + new_money
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", uptd_cash, user_id)
 
