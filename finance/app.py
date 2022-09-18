@@ -113,7 +113,7 @@ def add_money():
     if request.method == "GET":
         return render_template("add.html")
     else:
-        new_cash = int(request.form.get("new_money"))
+        new_money = int(request.form.get("new_money"))
 
         if not new_money:
             return apology("You Must Add Money")
