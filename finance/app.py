@@ -113,9 +113,9 @@ def add_money():
     if request.method == "GET":
         return render_template("add.html")
     else:
-        new_cash = int(request.form.get("new_cash"))
+        new_cash = int(request.form.get("new_money"))
 
-        if not new_cash:
+        if not new_money:
             return apology("You Must Add Money")
 
         user_id = session["user_id"]
