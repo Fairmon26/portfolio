@@ -127,8 +127,6 @@ def quote():
 
         return render_template("quoted.html", name = stock["name"], price = float(stock["price"]), symbol = stock["symbol"])
 
-
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
