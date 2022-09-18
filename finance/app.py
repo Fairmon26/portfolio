@@ -110,7 +110,23 @@ def history():
 @login_required
 def add_money():
     """User can add money"""
-    
+    if request.method == "GET":
+        return render_template("add.html")
+    else:
+        new_cash = int(request.form.get("new_cash"))
+
+        if not new_cash:
+            return apology("You Must Add Money")
+
+        user_id = session["user_id"]
+        user_cash_db = db.execute("SELECT cash FROM users Where id = :id", id = user_id)
+        user_cash = user_cash_db[0]["cash"]
+
+        uptd_cash = user_cash + new_cash
+
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", uptd_cash, user_id)
+
+        return redirect("/")
 
 
 @app.route("/login", methods=["GET", "POST"])
