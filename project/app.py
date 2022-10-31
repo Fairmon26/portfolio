@@ -133,7 +133,13 @@ def register():
         hash = generate_password_hash(password)
 
         try:
-            db.execute("")
+            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", email, hash)
+        except:
+            return apology("Username Taken")
+
+        session["user_id"] = newUser
+
+        return redirect("/")
 
 
 
