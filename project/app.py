@@ -42,20 +42,20 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    """"""
+    """Show all the emails received"""
     return apology("TODO")
 
 
-@app.route("/buy", methods=["GET", "POST"])
+@app.route("/compose", methods=["GET", "POST"])
 @login_required
-def buy():
-    """Buy shares of stock"""
+def compose():
+    """Write an email to someone"""
     return apology("TODO")
 
 
-@app.route("/history")
+@app.route("/sent")
 @login_required
-def history():
+def sent():
     """Show history of transactions"""
     return apology("TODO")
 
@@ -107,10 +107,10 @@ def logout():
     return redirect("/")
 
 
-@app.route("/quote", methods=["GET", "POST"])
+@app.route("/email", methods=["GET", "POST"])
 @login_required
-def quote():
-    """Get stock quote."""
+def email():
+    """View email details"""
     return apology("TODO")
 
 
@@ -120,8 +120,8 @@ def register():
     return apology("TODO")
 
 
-@app.route("/sell", methods=["GET", "POST"])
+@app.route("/reply", methods=["GET", "POST"])
 @login_required
-def sell():
-    """Sell shares of stock"""
+def reply():
+    """reply to email on email detail view"""
     return apology("TODO")
