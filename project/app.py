@@ -120,7 +120,18 @@ def register():
     if request.method == "GET":
         return render_template("register.html")
     else:
-        
+        email = request.form.get("email")
+        password = request.form.get("password")
+        confirm = request.form.get("confirm")
+
+        if not email or not password or not confirm:
+            return apology("You are missing a field")
+
+        if password != confirm:
+            return apology("Incorrect Password")
+
+           
+
 
 
 @app.route("/reply", methods=["GET", "POST"])
