@@ -130,7 +130,9 @@ def register():
         if password != confirm:
             return apology("Incorrect Password")
 
-           
+        hash = generate_password_hash(password)
+
+        
 
 
 
