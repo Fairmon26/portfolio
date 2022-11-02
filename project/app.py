@@ -58,6 +58,12 @@ def compose():
 
     else:
         sender = request.form.get("sender")
+        recipient = request.form.get("recipient")
+        subject = request.form.get("subject")
+        body = request.form.get("body")
+
+        if not sender or not recipient or not subject or not body:
+            return apology("")
 
 
 @app.route("/sent")
