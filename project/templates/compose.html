@@ -7,16 +7,19 @@
 {% block main %}
     <form action="/compose" method="post">
         <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="sender" placeholder="Email" type="email">
+            <label>From:</label>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="sender" type="email" value="{{ sender }}">
         </div>
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+            <label>To:</label>
+            <input class="form-control mx-auto w-auto" id="recipient" name="recipient" placeholder="Recipient" type="email">
         </div>
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="password" name="confirm" placeholder="Confirm Password" type="password">
+            <label>Subject:</label>
+            <input class="form-control mx-auto w-auto" id="subject" name="subject" placeholder="Subject" type="text">
         </div>
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+            <textarea name="body"></textarea>
         </div>
         <button class="btn btn-primary" type="submit">Send</button>
     </form>
