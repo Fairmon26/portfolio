@@ -138,7 +138,8 @@ def email():
     """View email details"""
     if request.method == "POST":
         emailId = request.form.get("emailId")
-        emailDetail = db.execute("SELECT * FROM Emails WHERE id = ?", emailId)
+        emailDetailDB = db.execute("SELECT * FROM Emails WHERE id = ?", emailId)
+        emailDetail = emailDetailDB[0]
         return render_template("email.html", emailDetail=emailDetail)
 
 
