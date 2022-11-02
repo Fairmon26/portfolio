@@ -63,7 +63,11 @@ def compose():
         body = request.form.get("body")
 
         if not sender or not recipient or not subject or not body:
-            return apology("")
+            return apology("You missed a Field")
+
+        db.execute("INSERT INTO Emails (sender, recipient, subject, body) VALUES (?, ?, ?, ?)", sender, recipient, subject, body)
+
+        return redirect("/sent")
 
 
 @app.route("/sent")
