@@ -28,3 +28,10 @@ nav .navbar-brand .green
     justify-content: space-between;
     align-items: center;
 }
+
+.view-email{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
