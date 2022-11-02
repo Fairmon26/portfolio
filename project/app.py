@@ -132,7 +132,7 @@ def logout():
     return redirect("/")
 
 
-@app.route("/email", methods=["POST"])
+@app.route("/email", methods=["GET", "POST"])
 @login_required
 def email():
     """View email details"""
@@ -172,7 +172,7 @@ def register():
 
 
 
-@app.route("/reply", methods=["POST"])
+@app.route("/reply", methods=["GET", "POST"])
 @login_required
 def reply():
     """reply to email on email detail view"""
