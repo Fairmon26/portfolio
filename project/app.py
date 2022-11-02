@@ -50,7 +50,9 @@ def index():
 @login_required
 def compose():
     """Write an email to someone"""
-    return apology("TODO")
+    if request.method == "GET":
+        userId = session["user_id"]
+        senderDB
 
 
 @app.route("/sent")
