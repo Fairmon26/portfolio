@@ -172,7 +172,7 @@ def register():
 
 
 
-@app.route("/reply", methods=["GET", "POST",])
+@app.route("/reply", methods=["POST", ...])
 @login_required
 def reply():
     """reply to email on email detail view"""
