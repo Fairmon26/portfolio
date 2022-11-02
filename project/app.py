@@ -77,7 +77,7 @@ def sent():
     userId = session["user_Id"]
     usernameDB = db.execute("SELECT username FROM users WHERE id = ?", userId)
     username = usernameDB[0]["username"]
-    emails = db.execute("SELECT * FROM Emails WHERE sender = ?")
+    emails = db.execute("SELECT * FROM Emails WHERE sender = ?", username)
 
 
 @app.route("/login", methods=["GET", "POST"])
