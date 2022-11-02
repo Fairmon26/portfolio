@@ -132,11 +132,14 @@ def logout():
     return redirect("/")
 
 
-@app.route("/email", methods=["GET", "POST"])
+@app.route("/email", methods=["POST"])
 @login_required
 def email():
     """View email details"""
-    return apology("TODO")
+    if request.method == "POST":
+        emailId = request.form.get("emailId")
+        emailDetail = db.execute("SELECT * FROM Emails WHERE id = ?", emailId)
+        return render_template("email.html", emailDetail=emailDetail)
 
 
 @app.route("/register", methods=["GET", "POST"])
