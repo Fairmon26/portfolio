@@ -73,8 +73,11 @@ def compose():
 @app.route("/sent")
 @login_required
 def sent():
-    """Show history of transactions"""
-    return apology("TODO")
+    """Show the emails sent out"""
+    userId = session["user_Id"]
+    usernameDB = db.execute("SELECT username FROM users WHERE id = ?", userId)
+    username = usernameDB[0]["username"]
+    emails = db.execute("SELECT * FROM Emails WHERE sender = ?")
 
 
 @app.route("/login", methods=["GET", "POST"])
