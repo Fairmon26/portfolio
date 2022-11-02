@@ -52,7 +52,12 @@ def compose():
     """Write an email to someone"""
     if request.method == "GET":
         userId = session["user_id"]
-        senderDB
+        senderDB = db.execute("SELECT username FROM users WHERE id = ?", userId)
+        sender = senderDB[0]["username"]
+        return render_template("compose.html", sender=sender)
+
+    else:
+        sender = request.form.get("sender")
 
 
 @app.route("/sent")
