@@ -23,5 +23,7 @@ int main(void)
     for(int i = 0; < strlen(text); i++)
     {
         if(text[i] == ' ')
+        words++;
     }
+    printf("%i words\n", words);
 }
