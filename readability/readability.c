@@ -7,7 +7,7 @@
 int main(void)
 {
     string text = get_string("Text: ");
-    printf("%s\n", text);
+
 
 
     int letters = 0;
@@ -16,7 +16,6 @@ int main(void)
         if((text[i] >= 'a' && text[i] <= '2') || (text[i] >= 'A' && text[i] <= 'Z'))
         letters++;
     }
-    printf("%i letters", letters);
 
     int words = 1;
     for(int i = 0; i <strlen(text); i++)
@@ -24,7 +23,6 @@ int main(void)
         if(text[i] == ' ')
         words++;
     }
-    printf("%i words\n", words);
 
     int sentences = 0;
     for(int i = 0; i < strlen(text); i++)
@@ -32,7 +30,6 @@ int main(void)
         if(text[i] == '.' || text[i] == '!' || text[i] == '?')
         sentences++;
     }
-    printf("%i sentences\n", sentences);
 
     float calculation = (0.0588 * letters / words * 100) - (0.296 * sentences / words * 100) - 15.8;
     int index = round(calculation);
