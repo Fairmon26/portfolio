@@ -35,4 +35,7 @@ int main(void)
         sentences++;
     }
     printf("%i sentences\n", sentences);
+
+
+    float calculation = (0.0588)
 }
