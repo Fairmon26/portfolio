@@ -6,7 +6,7 @@
 int main(void)
 {
     string text = get_string("Text: ");
-    
+
 
 
 
@@ -47,7 +47,7 @@ int main(void)
     }
     else if (index >= 16)
     {
-        print("Grade 16+\n");
+        printf("Grade 16+\n");
         return 0;
     }
     else
