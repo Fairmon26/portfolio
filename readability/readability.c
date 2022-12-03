@@ -16,5 +16,5 @@ int main(void)
         if((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z'))
         letters++;
     }
-    printf("%i letters", letters);
+    printf("%i letters\n", letters);
 }
