@@ -17,4 +17,12 @@ int main(void)
         letters++;
     }
     printf("%i letters", letters);
+
+    int words = 1;
+    for(int i = 0; i <strlen(text); i++)
+    {
+        if(text[i] == ' ')
+        words++;
+    }
+    printf("%i words\n", words);
 }
