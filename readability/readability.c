@@ -42,7 +42,7 @@ int main(void)
 
     else if (index > 16)
     {
-        prinf("Grade 16+");
+        printf("Grade 16+");
     }
 
     else
