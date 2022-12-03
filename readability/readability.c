@@ -37,5 +37,5 @@ int main(void)
     printf("%i sentences\n", sentences);
 
 
-    float calculation = (0.0588)
+    float calculation = (0.0588 * letters/ words)
 }
