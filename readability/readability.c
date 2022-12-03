@@ -19,7 +19,7 @@ int main(void)
             letters++;
         }
 
-        else if (text[i] == " ")
+        else if (isspace (text[i]))
         {
             words++;
         }
