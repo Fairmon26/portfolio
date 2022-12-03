@@ -39,7 +39,7 @@ int main(void)
     else if (index >= 16)
     {
         printf("Grade 16+\n");
-        return 0:
+        return 0;
     }
     else
     {
