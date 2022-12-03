@@ -8,5 +8,24 @@ int main(void)
     string text = get_string("Text: ");
     printf("%s\n", text);
 
-    
+    int letters = 0;
+    for(int i = 0; i < strlen(text); i++)
+    {
+        if((text[i] >= 'a' && text[i] <= '2') || (text[i] >= 'A' && text[i] <= 'Z'))
+        letters++;
+    }
+
+    int words = 1;
+    for(int i = 0; i <strlen(text); i++)
+    {
+        if(text[i] == ' ')
+        words++;
+    }
+
+    int sentences = 0;
+    for(int i = 0; i < strlen(text); i++)
+    {
+        if(text[i] == '.' || text[i] == '!' || text[i] == '?')
+        sentences++;
+    }
 }
