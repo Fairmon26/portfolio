@@ -28,7 +28,7 @@ int main(void)
         if(text[i] == '.' || text[i] == '!' || text[i] == '?')
         sentences++;
     }
-    float calculation = ((0.0588 * letters / words * 100) - (0.296 * sentences / words * 100) - 15.8);
+    float calculation = (0.0588 * letters / words * 100) - (0.296 * sentences / words * 100) - 15.8;
     int index = round(calculation);
 
     if (index < 1)
